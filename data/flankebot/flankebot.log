@@ -1,0 +1,376 @@
+[08/10/2018 04:11] ERROR bot load_cogs 306: [WinError 3] The system cannot find the path specified: 'data/downloader/community'
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 303, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 397, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 296, in setup
+    n = Downloader(bot)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 23, in __init__
+    self.update_repos()
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 263, in update_repos
+    self.populate_list(name)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 252, in populate_list
+    valid_cogs = self.list_cogs(name)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 225, in list_cogs
+    folders = [f for f in os.listdir(repo_path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'data/downloader/community'
+[08/10/2018 04:12] ERROR bot load_cogs 306: imgurpython is not installed. Do 'pip3 install imgurpython' to use this cog.
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\image.py", line 113, in setup
+    from imgurpython import ImgurClient
+ModuleNotFoundError: No module named 'imgurpython'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 303, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 397, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\image.py", line 115, in setup
+    raise ModuleNotFound("imgurpython is not installed. Do 'pip3 install imgurpython' to use this cog.")
+cogs.image.ModuleNotFound: imgurpython is not installed. Do 'pip3 install imgurpython' to use this cog.
+[08/10/2018 04:12] ERROR bot <module> 367: Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\http.py", line 243, in email_login
+    data = yield from self.request(Route('POST', '/auth/login'), json=payload)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: BAD REQUEST (status code: 400)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 365, in <module>
+    loop.run_until_complete(main())
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 467, in run_until_complete
+    return future.result()
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 359, in main
+    yield from bot.login(settings.email, settings.password)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\client.py", line 416, in login
+    yield from getattr(self, '_login_' + str(n))(*args, **kwargs)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\client.py", line 367, in _login_2
+    yield from self.http.email_login(email, password)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\http.py", line 246, in email_login
+    raise LoginFailure('Improper credentials have been passed.') from e
+discord.errors.LoginFailure: Improper credentials have been passed.
+
+[08/10/2018 05:41] ERROR bot load_cogs 308: ('inconsistent use of tabs and spaces in indentation', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\audio.py', 56, 25, '\t\tself.voice_states = {}\n'))
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\audio.py", line 56
+    self.voice_states = {}
+                         ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 305, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 399, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('inconsistent use of tabs and spaces in indentation', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\audio.py', 56, 25, '\t\tself.voice_states = {}\n'))
+[08/10/2018 08:37] ERROR bot load_cogs 325: ('inconsistent use of tabs and spaces in indentation', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\general.py', 81, 40, '\t@commands.command(pass_context = True)\n'))
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\general.py", line 81
+    @commands.command(pass_context = True)
+                                         ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 322, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 399, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('inconsistent use of tabs and spaces in indentation', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\general.py', 81, 40, '\t@commands.command(pass_context = True)\n'))
+[08/10/2018 16:56] ERROR bot load_cogs 324: ('inconsistent use of tabs and spaces in indentation', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\audio.py', 103, 48, '\t\t\t\t\tawait self.bot.join_voice_channel(channel)\n'))
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\audio.py", line 103
+    await self.bot.join_voice_channel(channel)
+                                             ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 321, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 399, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('inconsistent use of tabs and spaces in indentation', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\audio.py', 103, 48, '\t\t\t\t\tawait self.bot.join_voice_channel(channel)\n'))
+[08/10/2018 16:56] ERROR bot load_cogs 324: [WinError 3] The system cannot find the path specified: 'data/downloader/community'
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 321, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 397, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 296, in setup
+    n = Downloader(bot)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 23, in __init__
+    self.update_repos()
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 263, in update_repos
+    self.populate_list(name)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 252, in populate_list
+    valid_cogs = self.list_cogs(name)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 225, in list_cogs
+    folders = [f for f in os.listdir(repo_path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'data/downloader/community'
+[09/10/2018 04:27] ERROR bot load_cogs 324: ('invalid character in identifier', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\audio.py', 103, 90, '                    await self.bot.join_voice_channel(bot.get_channel(“450520014433550337”))\n'))
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\audio.py", line 103
+    await self.bot.join_voice_channel(bot.get_channel(“450520014433550337”))
+                                                                         ^
+SyntaxError: invalid character in identifier
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 321, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 399, in _load_cog
+    raise CogLoadError(*e.args)
+cogs.owner.CogLoadError: ('invalid character in identifier', ('C:\\Users\\jeanbraddy112553\\Desktop\\flankebot\\cogs\\audio.py', 103, 90, '                    await self.bot.join_voice_channel(bot.get_channel(“450520014433550337”))\n'))
+[09/10/2018 05:32] ERROR bot load_cogs 324: No module named 'utils'
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 321, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\audio.py", line 11, in <module>
+    from utils.dataIO import fileIO
+ModuleNotFoundError: No module named 'utils'
+[09/10/2018 06:38] ERROR bot load_cogs 324: No module named 'utils.dataIO'
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 321, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\audio.py", line 11, in <module>
+    from utils.dataIO import fileIO
+ModuleNotFoundError: No module named 'utils.dataIO'
+[09/10/2018 17:42] ERROR bot load_cogs 326: [WinError 3] The system cannot find the path specified: 'data/downloader/community'
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 323, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 397, in _load_cog
+    self.bot.load_extension(mod_obj.__name__)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\ext\commands\bot.py", line 738, in load_extension
+    lib.setup(self)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 296, in setup
+    n = Downloader(bot)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 23, in __init__
+    self.update_repos()
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 263, in update_repos
+    self.populate_list(name)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 252, in populate_list
+    valid_cogs = self.list_cogs(name)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\downloader.py", line 225, in list_cogs
+    folders = [f for f in os.listdir(repo_path)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'data/downloader/community'
+[09/10/2018 17:42] ERROR bot <module> 387: Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\http.py", line 258, in static_login
+    data = yield from self.request(Route('GET', '/users/@me'))
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\http.py", line 200, in request
+    raise HTTPException(r, data)
+discord.errors.HTTPException: UNAUTHORIZED (status code: 401): 401: Unauthorized
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 385, in <module>
+    loop.run_until_complete(main())
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 467, in run_until_complete
+    return future.result()
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 370, in main
+    yield from bot.login(settings.email)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\client.py", line 416, in login
+    yield from getattr(self, '_login_' + str(n))(*args, **kwargs)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\client.py", line 346, in _login_1
+    data = yield from self.http.static_login(token, bot=is_bot)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\site-packages\discord\http.py", line 262, in static_login
+    raise LoginFailure('Improper token has been passed.') from e
+discord.errors.LoginFailure: Improper token has been passed.
+
+[10/10/2018 12:12] ERROR bot load_cogs 326: cannot import name 'dataIO'
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 323, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\autorole.py", line 5, in <module>
+    from .utils.dataIO import dataIO
+ImportError: cannot import name 'dataIO'
+[10/10/2018 23:40] ERROR bot load_cogs 326: module 'discord' has no attribute 'Channel'
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 323, in load_cogs
+    owner_cog._load_cog(extension)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\owner.py", line 395, in _load_cog
+    mod_obj = importlib.import_module(cogname)
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\mod.py", line 15, in <module>
+    class Mod:
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\cogs\mod.py", line 268, in Mod
+    async def ignore_channel(self, ctx, channel : discord.Channel=None):
+AttributeError: module 'discord' has no attribute 'Channel'
+[10/10/2018 23:40] ERROR bot <module> 395: Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 370, in main
+    yield from bot.login(settings.email)
+TypeError: cannot 'yield from' a coroutine object in a non-coroutine generator
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 385, in <module>
+    loop.run_until_complete(main())
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 377, in main
+    sys.exit(msg)
+SystemExit: 
+You are using an outdated discord.py.
+update your discord.py with by running this in your cmd prompt/terminal.
+pip3 install --upgrade git+https://github.com/Rapptz/discord.py@async
+
+[10/10/2018 23:43] ERROR bot <module> 395: Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 370, in main
+    yield from bot.login(settings.email)
+TypeError: cannot 'yield from' a coroutine object in a non-coroutine generator
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 385, in <module>
+    loop.run_until_complete(main())
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 377, in main
+    sys.exit(msg)
+SystemExit: 
+You are using an outdated discord.py.
+update your discord.py with by running this in your cmd prompt/terminal.
+pip3 install --upgrade git+https://github.com/Rapptz/discord.py@async
+
+[11/10/2018 00:09] ERROR bot <module> 395: Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 370, in main
+    yield from bot.login(settings.email)
+TypeError: cannot 'yield from' a coroutine object in a non-coroutine generator
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 385, in <module>
+    loop.run_until_complete(main())
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 454, in run_until_complete
+    self.run_forever()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 421, in run_forever
+    self._run_once()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\base_events.py", line 1431, in _run_once
+    handle._run()
+  File "C:\Users\jeanbraddy112553\AppData\Local\Programs\Python\Python36\lib\asyncio\events.py", line 145, in _run
+    self._callback(*self._args)
+  File "C:\Users\jeanbraddy112553\Desktop\flankebot\bot.py", line 377, in main
+    sys.exit(msg)
+SystemExit: 
+You are using an outdated discord.py.
+update your discord.py with by running this in your cmd prompt/terminal.
+pip3 install --upgrade git+https://github.com/Rapptz/discord.py@async
+
