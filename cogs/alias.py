@@ -6,7 +6,7 @@ from __main__ import send_cmd_help
 import os
 
 #
-# A module for quick access to frequently used commands. By Cal_9000
+# A module for quick access to frequently used commands.
 # Each alias is unique to the server it was created on.
 # To create an alias use [P]alias add [name] [command] {arg} #More than one argument can be used.
 #
